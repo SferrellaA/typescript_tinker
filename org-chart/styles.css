@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.input-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  min-height: 20px;
+}
+
+.org-chart {
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.node {
+  background-color: #ffffff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.node ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.node li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 20px;
+}
+
+.node li::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #007bff;
+}
+
+.node li::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 50%;
+  height: 20px;
+  border-top: 2px solid #007bff;
+  border-left: 2px solid #007bff;
+  transform: translateX(-50%);
+}
+
+.node li:first-child::after {
+  width: 0;
+}
+
+.node li:last-child::after {
+  width: 0;
+  border-left: none;
+  border-right: 2px solid #007bff;
+}
+
+.node > div {
+  font-weight: bold;
+  color: #333;
+}

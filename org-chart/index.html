@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Org Chart Renderer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <div class="container">
+    <h1>Organization Chart Renderer</h1>
+    <div class="input-section">
+      <textarea id="jsonInput" placeholder="Enter your JSON here..." rows="10" cols="50"></textarea>
+      <button id="renderButton">Render Org Chart</button>
+      <div id="error" class="error"></div>
+    </div>
+    <div id="orgChart" class="org-chart"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

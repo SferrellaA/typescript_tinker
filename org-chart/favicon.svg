@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Root square (top node) -->
+  <rect x="12" y="2" width="8" height="8" fill="#E6F0FA" stroke="black" stroke-width="0.5"/>
+  
+  <!-- Connecting lines from root to child nodes -->
+  <line x1="16" y1="10" x2="16" y2="14" stroke="black" stroke-width="0.5"/>
+  <line x1="16" y1="14" x2="8" y2="18" stroke="black" stroke-width="0.5"/>
+  <line x1="16" y1="14" x2="16" y2="18" stroke="black" stroke-width="0.5"/>
+  <line x1="16" y1="14" x2="24" y2="18" stroke="black" stroke-width="0.5"/>
+  
+  <!-- Child squares (second level) -->
+  <rect x="4" y="18" width="8" height="8" fill="#E6F0FA" stroke="black" stroke-width="0.5"/>
+  <rect x="12" y="18" width="8" height="8" fill="#E6F0FA" stroke="black" stroke-width="0.5"/>
+  <rect x="20" y="18" width="8" height="8" fill="#E6F0FA" stroke="black" stroke-width="0.5"/>
+</svg>

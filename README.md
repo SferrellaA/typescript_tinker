@@ -1,3 +1,3 @@
-# typescript_tinker
+# Typescript Tinker
 
 tinkering with typescript and vibecoding
