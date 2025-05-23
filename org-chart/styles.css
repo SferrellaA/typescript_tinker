@@ -53,6 +53,7 @@ button:hover {
   display: flex;
   justify-content: center;
   min-height: 400px;
+  position: relative;
 }
 
 .node {
@@ -64,54 +65,67 @@ button:hover {
   min-width: 120px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
+  display: inline-block;
+}
+
+.ul-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 10px; /* Slim vertical gap between parent and children */
 }
 
 .node ul {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  min-height: 30px; /* Reduced to match slimmer gaps */
+  row-gap: 10px; /* Slim vertical gap between wrapped rows */
 }
 
 .node li {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  margin: 0 20px;
-}
-
-.node li::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  width: 2px;
-  height: 20px;
-  background: #007bff;
-}
-
-.node li::after {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  width: 50%;
-  height: 20px;
-  border-top: 2px solid #007bff;
-  border-left: 2px solid #007bff;
-  transform: translateX(-50%);
+  margin: 5px 10px; /* Slim horizontal and vertical margins */
+  min-width: 120px;
 }
 
 .node li:first-child::after {
-  width: 0;
+  width: calc(50% + 10px); /* Adjusted for new 10px margin */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .node li:last-child::after {
-  width: 0;
-  border-left: none;
-  border-right: 2px solid #007bff;
+  width: calc(50% + 10px); /* Adjusted for new 10px margin */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.node li:only-child::after {
+  display: none;
+}
+
+.node li:nth-child(n+2)::after {
+  width: calc(100% + 20px);
+  left: -10px; /* Adjusted for new 10px margin */
 }
 
 .node > div {
   font-weight: bold;
   color: #333;
+}
+
+.node {
+  min-height: 0;
+  height: auto;
+}
+
+.node ul {
+  align-content: flex-start;
 }

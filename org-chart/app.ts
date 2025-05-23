@@ -11,15 +11,19 @@ function renderNode(office: Office): HTMLElement {
   nameDiv.textContent = office.name;
   node.appendChild(nameDiv);
 
-  if (office.offices && office.offices.length > 0) {
-    const ul = document.createElement("ul");
-    office.offices.forEach((child) => {
-      const li = document.createElement("li");
-      li.appendChild(renderNode(child));
-      ul.appendChild(li);
-    });
-    node.appendChild(ul);
-  }
+// Inside renderNode function, replace the ul creation block
+if (office.offices && office.offices.length > 0) {
+  const ulWrapper = document.createElement("div"); // New wrapper div
+  ulWrapper.className = "ul-wrapper";
+  const ul = document.createElement("ul");
+  office.offices.forEach((child) => {
+    const li = document.createElement("li");
+    li.appendChild(renderNode(child));
+    ul.appendChild(li);
+  });
+  ulWrapper.appendChild(ul);
+  node.appendChild(ulWrapper);
+}
 
   return node;
 }

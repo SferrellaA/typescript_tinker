@@ -1,0 +1,53 @@
+{
+  "name": "Global HQ",
+  "offices": [
+    {
+      "name": "North America",
+      "offices": [
+        {
+          "name": "New York Office",
+          "offices": [
+            { "name": "Sales Team" },
+            { "name": "Product Development" }
+          ]
+        },
+        {
+          "name": "San Francisco Office",
+          "offices": [
+            { "name": "Engineering Team" },
+            { "name": "Design Team" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Europe",
+      "offices": [
+        {
+          "name": "London Office",
+          "offices": [
+            { "name": "Marketing Team" }
+          ]
+        },
+        {
+          "name": "Berlin Office",
+          "offices": [
+            { "name": "Finance Team" },
+            { "name": "HR Team" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Asia-Pacific",
+      "offices": [
+        {
+          "name": "Tokyo Office",
+          "offices": [
+            { "name": "Customer Support" }
+          ]
+        }
+      ]
+    }
+  ]
+}
